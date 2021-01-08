@@ -6,7 +6,11 @@ export const getNewTeams = async (numberOfTeams) => {
     const response = await axios.get(url);
     const listOfCountries = response.data;
 
-    const countriesArr = listOfCountries.map((country) => country.name);
+    const countriesArr = listOfCountries.map((country) => {
+        if (country.name.length === 5) {
+            return country.name;
+        }
+    });
     const shuffledCountries = countriesArr.sort((a, b) => 0.5 - Math.random());
     shuffledCountries.length = numberOfTeams;
 
