@@ -1,12 +1,13 @@
 import { teamNames } from './index.js';
 
+const separator = '===============================';
+
 export const titleTexts = (round) => {
     switch (round) {
         case 'start':
             console.log('COMIENZA EL TORNEO (fase de eliminatorias)');
             console.log('Participantes:');
             break;
-
         case 1:
             console.log('==== OCTAVOS DE FINAL ====');
             break;
@@ -23,13 +24,13 @@ export const titleTexts = (round) => {
             console.log('========== FINAL =========');
             break;
         case 'end':
-            console.log('===============================');
+            console.log(separator);
             console.log(
                 `¡${teamNames
                     .toString()
                     .toUpperCase()} es el campeón del mundo!`
             );
-            console.log('===============================');
+            console.log(separator);
             break;
     }
 };
