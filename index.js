@@ -1,16 +1,27 @@
 import WorldCup from './classes/WorldCup.js';
 import countries from './assets/countries.js';
 
-const numberOfTeams = 16;
-let teamNamesArr = [];
+try {
+    const numberOfTeams = 16;
+    const teamNamesArr = [];
 
-const teamNames = countries.forEach((team) => {
-    if (team.name.length == 5) {
-        teamNamesArr.push(team.name);
-    }
-});
+    const teamNames = countries.forEach((country) => {
+        // teamNamesArr.push(country.name);
 
-const worldCup = new WorldCup('Mundial de fútbol', teamNamesArr, numberOfTeams);
+        // alternative code which gets a pefect grid with results
+        if (country.name.length === 5) {
+            teamNamesArr.push(country.name);
+        }
+    });
 
-// The championship start
-worldCup.start(worldCup.teams);
+    const worldCup = new WorldCup(
+        'Mundial de fútbol',
+        teamNamesArr,
+        numberOfTeams
+    );
+
+    // The championship start
+    worldCup.start(worldCup.teams);
+} catch {
+    console.error('ERROR', error);
+}

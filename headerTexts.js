@@ -11,9 +11,9 @@ function printStartChampionship() {
 
 function printEndChampionship(winner) {
     console.log(' ');
-    console.log('\x1b[32m%s\x1b[0m', '==============================');
-    console.log(`¡${winner} ES CAMPEÓN DEL MUNDO!`);
-    console.log('\x1b[32m%s\x1b[0m', '==============================');
+    console.log('\x1b[32m%s\x1b[0m', '============================');
+    console.log(`¡${winner.join().toUpperCase()} es campeón del mundo!`);
+    console.log('\x1b[32m%s\x1b[0m', '============================');
 }
 
 function headerTexts(matches) {
