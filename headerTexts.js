@@ -11,9 +11,9 @@ function printStartChampionship() {
 
 function printEndChampionship(winner) {
     console.log(' ');
-    console.log('\x1b[32m%s\x1b[0m', '============================');
+    console.log('\x1b[32m%s\x1b[0m', '==============================');
     console.log(`¡${winner.join().toUpperCase()} es campeón del mundo!`);
-    console.log('\x1b[32m%s\x1b[0m', '============================');
+    console.log('\x1b[32m%s\x1b[0m', '==============================');
 }
 
 function headerTexts(matches) {
@@ -48,3 +48,13 @@ function headerTexts(matches) {
 
 export default headerTexts;
 export { last2Matches, printEndChampionship, printStartChampionship };
+
+// v3
+
+function startChampionshipText() {
+    console.log('===================');
+    console.log('COMIENZA EL MUNDIAL');
+    console.log('===================');
+}
+
+export { startChampionshipText };
